@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Helton Rodrigues</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Principal</a>
+            <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
+            <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+            <a href="portfolio.html"><i class="fas fa-envelope"></i> + Portfólio</a>
+        </div>
+    </nav>
+
+    <div
+        style="max-width: 900px; margin: 40px auto; padding: 20px;  border-radius: 10px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+        <header style="text-align: center; margin-bottom: 20px;">
+            <h1 style="font-family: Arial, sans-serif; color: #ffff;">Sobre</h1>
+        </header>
+        <section style="display: flex; align-items: center; flex-direction: column; text-align: center;">
+
+
+            <img src="img/helttonr.jpg" style="aspect-ratio: 1; width: 211px;  border-radius: 10px;">
+            <div class="card-body">
+                <h1 style="font-size: 24px; margin-bottom: 10px; color: #007bff;">Helton Rodrigues</h1>
+                <p style="font-size: 16px; margin-bottom: 10px;">Sou um desenvolvedor web apaixonado por criar
+                    interfaces de usuário intuitivas e funcionais. Tenho experiência em HTML, CSS, JavaScript, e estou
+                    sempre aprendendo novas tecnologias para melhorar minhas habilidades.</p>
+                <p style="font-size: 16px; margin-bottom: 10px;">No meu tempo livre, gosto de explorar novas ferramentas
+                    de desenvolvimento, ler sobre tecnologia e colaborar em projetos open-source.</p>
+            </div>
+            <h1 style="font-size: 24px; margin-bottom: 10px; color: #007bff;">Habilidade</h1>
+            <p class="p">
+                Desenvolvedor Front-end com experiência em desenvolvimento Full Stack Jr., especializado em JavaScript,
+                HTML, CSS, PHP, SQL e Kotlin Jr.            </p>
+    </div>
+
+    <footer>
+        <div class="socials">
+            <i onclick="window.location.href='#'"   class='bx bxl-facebook-square'></i>
+            <i onclick="window.location.href='#'" class='bx bxl-instagram'></i>
+            <i onclick="window.location.href='#'" class='bx bxl-twitter'></i>
+            <i onclick="window.location.href='  https://www.linkedin.com/in/helton-rodrigues-10a6bb56/';"
+            class='bx bxl-linkedin-square'></i>
+        </div>
+        <p>Copyright ©2024, Portfólio Helton Rodrigues.</p>
+    </footer>
+</body></html>
+
+
+
+<style>
+    /* Estilo do Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        /* Adiciona um sombreamento para destacar a imagem */
+    }
+
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>

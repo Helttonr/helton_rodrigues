@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./img/assets/ico/icone.png" id="favicon">
+    <title>Portfólio Helton Rodrigues</title>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Principal</a>
+            <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
+            <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+            <a href="portfolio.html"><i class="fas fa-envelope"></i> + Portfólio</a>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="info">
+            <div style="display: flex; align-items: center;">
+                <h1>Olá!</h1>
+                <h1 class="waving-hand" style="margin-left: 10px;">👋 </h1>
+            </div>
+
+            <link rel="icon" type="image/png" href="./img/assets/ico/icone.png" id="favicon">
+            <h1>eu sou o Helton Rodrigues, <br>Apaixonado por criar soluções tecnológicas inovadoras</h1>
+            <p>Desenvolvedor com experiência em JavaScript, HTML, CSS, PHP, SQL e Kotlin Jr.
+                Formado em <span class="font-semibold">Sistemas de Informação</span>, atualmente estou cursando uma
+                <span class="font-semibold">especialização em Kotlin e Java</span>.
+            </p>
+            <button title="Em adquação ">Download Resume</button>
+        </div>
+        <img src="./assets/Foto de Perfil.jpg" width="48" height="40" style="transition: box-shadow 0.3s ease;">
+    </div>
+
+
+
+    <div class="separator">
+        <div class="details">
+            <a href="portfolio.html">
+                <h3>+ Portfólio</h3>
+            </a>
+            
+        </div>
+        <hr>
+        <div class="featured">
+            <div class="item">
+                <img src="img/2.png" width="48" height="40" class="thumbnail" id="thumbnail">
+                <div class="details">
+                    <h3>Dashboard Interativos </h3>
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>JavaScript, Bootstrap e PHP</h4>
+                    </div>
+                    <p>Uma visão geral de como essas tecnologias são integradas para construir dashboards interativos e
+                        dinâmicos, proporcionando uma experiência de usuário fluida e responsiva.</p>
+                </div>
+            </div>
+        </div>
+        <div class="featured">
+            <div class="item">
+                <img src="img/1.png" width="48" height="40" class="thumbnail" id="thumbnail2">
+                <div class="details">
+                    <h3>Sistemas de Gestão</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>JavaScript, Bootstrap e PHP</h4>
+                    </div>
+                    <p>Sistemas de Gestão: Soluções robustas que utilizam tecnologias avançadas para otimizar processos,
+                        melhorar a tomada de decisões e aumentar a eficiência operacional nas organizações.</p>
+                    <p>Controle Preventiva, Controle Sesmt.</p>
+                    <p>Controle Digital de Recebimento de documentos.</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/3.png" width="48" height="40" class="thumbnail" id="thumbnail">
+                <div class="details">
+                    <h3>Dashboard Interativos Sesmt</h3>
+                    <div class="item-info">
+                        <div class="year-badge">2024</div>
+                        <h4>JavaScript, Bootstrap e PHP</h4>
+                    </div>
+
+                    <p>Responsável por garantir o cumprimento das normas de segurança e saúde ocupacional dentro da empresa.</<p>
+                    <ul>
+                        
+                        <li>"Promovendo  programas e treinamentos para promover a saúde e segurança dos colaboradores."</li>
+                        <li>"Controle de Validade de ASO"</li>
+                        <li>"Controle de Validade de Carteira de Habilitação"</li>
+                        <li>"Controle por Qualificação de trabalho"</li>
+                    </ul>
+
+                    
+                    <button class="btn btn-primary" style="margin-top: 10px;" onclick="window.location.href='portfolio.html';"><b>Ver Mais</b></button>
+
+                    <!-- Dica visual -->
+                    <div class="more-info" style="margin-top: 10px; font-size: 0.9rem; color: #888;">
+                        <p><i class="fas fa-arrow-down"></i> Continue para mais detalhes</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+
+
+
+
+        <footer>
+            <div class="socials">
+                <i onclick="window.location.href='#'"   class='bx bxl-facebook-square'></i>
+                <i onclick="window.location.href='#'" class='bx bxl-instagram'></i>
+                <i onclick="window.location.href='#'" class='bx bxl-twitter'></i>
+                <i onclick="window.location.href='  https://www.linkedin.com/in/helton-rodrigues-10a6bb56/';"
+                class='bx bxl-linkedin-square'></i>
+            </div>
+            <p>Copyright ©2024, Portfólio Helton Rodrigues.</p>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Obtenha elementos
+                var modal = document.getElementById("imageModal");
+                var modalImg = document.getElementById("modalImage");
+                var span = document.getElementsByClassName("close")[0];
+
+                // Selecione todas as imagens com classe 'thumbnail'
+                var images = document.querySelectorAll('.thumbnail');
+
+                images.forEach(function (img) {
+                    img.onclick = function () {
+                        modal.style.display = "block";
+                        modalImg.src = this.src;
+                    }
+                });
+
+                // Quando o usuário clica no 'x' para fechar o modal
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            });
+
+        </script>
+</body>
+
+</html>
+
+
+
+<style>
+    @keyframes wave-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        20% {
+            transform: rotate(-10deg);
+        }
+
+        40% {
+            transform: rotate(10deg);
+        }
+
+        60% {
+            transform: rotate(-10deg);
+        }
+
+        80% {
+            transform: rotate(10deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .waving-hand {
+        animation: wave-animation 1s ease-in-out infinite;
+        transform-origin: 10% 20%;
+    }
+
+    /* Estilo do Modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        /* Adiciona um sombreamento para destacar a imagem */
+    }
+
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+</style>

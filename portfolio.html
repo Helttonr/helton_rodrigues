@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio Helton Rodrigues</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html"><i class="fas fa-home"></i> Principal</a>
+            <a href="sobre.html"><i class="fas fa-user"></i> Sobre</a>
+            <a href="contato.html"><i class="fas fa-envelope"></i> Contato</a>
+            <a href="portfolio.html"><i class="fas fa-envelope"></i> + Portfólio</a>
+
+
+        </div>
+    </nav>
+
+    <main>
+        <section class="separator">
+            <div class="details">
+                <a href="portfolio.html">
+                    <h3>+ Portfólio</h3>
+                </a>
+            </div>
+            <hr>
+            <div class="featured">
+                <div class="item">
+                    <img src="img/4.png" width="28" height="20" class="thumbnail" id="thumbnail">
+                    <div class="details">
+                        <h3>Clima Organizacional</h3>
+                        <div class="item-info">
+                            <div class="year-badge">2024</div>
+                            <h4>JavaScript, Bootstrap e PHP</h4>
+                        </div>
+                        <ul>
+                            <li>"Cultivando um ambiente de trabalho positivo e colaborativo."</li>
+                            <li>"Promovendo uma cultura de respeito e engajamento no local de trabalho."</li>
+                            <li>"Fomentando um clima organizacional que valoriza a comunicação e o bem-estar."</li>
+                            <li>"Transformando o ambiente de trabalho com uma atmosfera de confiança e apoio."</li>
+                            <li>"Construindo um clima organizacional onde todos se sentem valorizados e motivados."</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured">
+                <div class="item">
+                    <img src="img/5.png" width="48" height="40" class="thumbnail" id="thumbnail2">
+                    <div class="details">
+                        <h3>Sistemas de Graus de Ocupação</h3>
+                        <div class="item-info">
+                            <div class="year-badge">2024</div>
+                            <h4>JavaScript, Bootstrap e PHP</h4>
+                        </div>
+                        <p>Soluções eficazes para monitoramento e registro do recebimento de produtos importados.</p>
+                        <ul>
+                            <li>Anexo por Foto:</li>
+                            <li>Relatórios disponíveis em PDF e Excel.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured">
+                <div class="item">
+                    <img src="img/6.png" width="48" height="40" class="thumbnail" id="thumbnail2">
+                    <div class="details">
+                        <h3>Sistemas Avançados para Sequenciamento de Peça</h3>
+                        <div class="item-info">
+                            <div class="year-badge">2024</div>
+                            <h4>JavaScript, Bootstrap e PHP</h4>
+                        </div>
+                        <p>Soluções inovadoras para o sequenciamento de peças.</p>
+                        <ul>
+                            <li>O card muda de cor a cada etapa, seguindo o esquema de um semáforo:
+                                <ul>
+                                    <li><span style="color: yellow;">🟡</span> Aguardando</li>
+                                    <li><span style="color: green;">🟢</span> Validado</li>
+                                    <li><span style="color: red;">🔴</span> Peça Errada</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-table-wrapper">
+                <table class="featured-table">
+                    <thead>
+                        <tr>
+                            <th>Reconhecimento Inovação:</th>
+                            <th>Destaque do Mês</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img src="img/7.jpeg" width="148" height="130" class="thumbnail" id="thumbnail2"></td>
+                            <td>
+                                <div class="item-info">
+                                    <div class="year-badge">2024</div>
+                                    <h6>Destaque do Mês</h6>
+                                </div>
+                            </td>
+                            <td>Minha paixão pelo que faço é impulsionada pela oportunidade de contribuir para uma
+                                empresa que valoriza e reconhece o esforço de cada um. Juntos, buscamos a excelência, e
+                                é gratificante ver nosso trabalho ser reconhecido e celebrado.</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/8.jpeg" width="148" height="130" class="thumbnail" id="thumbnail2"></td>
+                            <td>
+                                <div class="item-info">
+                                    <div class="year-badge">2024</div>
+                                    <h6>Destaque do Mês</h6>
+                                </div>
+                            </td>
+                            <td>Implementamos medidas eficazes para a proteção e pela oportunidade de contribuir.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="imageModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
+        </div>
+    </main>
+    <footer>
+        <div class="socials">
+            <i onclick="window.location.href='#'"   class='bx bxl-facebook-square'></i>
+            <i onclick="window.location.href='#'" class='bx bxl-instagram'></i>
+            <i onclick="window.location.href='#'" class='bx bxl-twitter'></i>
+            <i onclick="window.location.href='  https://www.linkedin.com/in/helton-rodrigues-10a6bb56/';"
+            class='bx bxl-linkedin-square'></i>
+        </div>
+        <p>Copyright ©2024, Portfólio Helton Rodrigues.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            var span = document.getElementsByClassName("close")[0];
+
+            var images = document.querySelectorAll('.thumbnail');
+
+            images.forEach(function (img) {
+                img.onclick = function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            });
+
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav {
+        background-color: #333;
+        padding: 10px;
+        color: white;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+    }
+
+    .separator {
+        padding: 20px;
+    }
+
+    .details h3 {
+        margin-top: 0;
+    }
+
+    .featured {
+        margin-bottom: 20px;
+    }
+
+    .item {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .thumbnail {
+        border-radius: 10px;
+    }
+
+    .details {
+        margin-left: 20px;
+    }
+
+    .item-info {
+        display: flex;
+        align-items: center;
+    }
+
+    .year-badge {
+        background-color: #e2e2e2;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .item-info h4,
+    .item-info h6 {
+        margin: 0;
+        color: #555;
+    }
+
+    ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    .featured-table-wrapper {
+        margin-top: 20px;
+    }
+
+    .featured-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .featured-table th,
+    .featured-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    .featured-table th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+    .featured-table img.thumbnail {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+
+    .modal-content {
+        margin: auto;
+        display: block;
+        max-width: 90%;
+        max-height: 90%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #fff;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .socials i {
+        font-size: 24px;
+        margin: 0 10px;
+        color: white;
+    }
+
+    .socials i:hover {
+        color: #bbb;
+    }
+</style>
